@@ -146,13 +146,6 @@ header h1 {
   border-radius: 0.25em;
 }
 
-.timeline-content--text {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 0.25em;
-  padding: 1em 1em 0.7em 1em;
-  line-height: 16px;
-}
-
 .timeline-content:after {
   /* clearfix */
   content: "";
@@ -182,18 +175,45 @@ header h1 {
   overflow: hidden;
 }
 
-.timeline-content--storylines img {
-  max-height: 100px;
-  width: auto;
-  float:left;
+.timeline-content--text {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.25em;
+  padding: 1em 1em 0.7em 1em;
+  line-height: 16px;
 }
 
-.timeline-content--storylines img:first-child {
+.timeline-content--storylines figure {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.timeline-content--storylines figure:first-child {
   border-top-left-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
 }
 
-.timeline-content--storylines img:last-child {
+.timeline-content--storylines figure:last-child {
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
+}
+
+.timeline-content--storylines img {
+  float: left;
+  max-height: 100px;
+  width: auto;
+}
+
+.timeline-content--storylines figcaption {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0.25em;
+  font-family: AvenirLT-Light, sans-serif;
+}
+
+.timeline-content--storylines figure:hover figcaption {
+  filter: brightness(125%);
+  background-color: rgba(255, 255, 255, 0.2);
 }
